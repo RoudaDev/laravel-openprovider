@@ -1,8 +1,8 @@
 <?php
 
-namespace nickurt\OpenProvider;
+namespace rouda\OpenProvider;
 
-use nickurt\OpenProvider\HttpClient\HttpClient;
+use rouda\OpenProvider\HttpClient\HttpClient;
 
 class Client
 {
@@ -67,7 +67,7 @@ class Client
             throw new \InvalidArgumentException(sprintf('Undefined method called:"%s"', $name));
         }
 
-        $class = '\\nickurt\\OpenProvider\\Api\\' . $this->classes[$name];
+        $class = '\\rouda\\OpenProvider\\Api\\' . $this->classes[$name];
 
         return new $class($this);
     }

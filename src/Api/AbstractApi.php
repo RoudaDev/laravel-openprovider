@@ -1,8 +1,8 @@
 <?php
 
-namespace nickurt\OpenProvider\Api;
+namespace rouda\OpenProvider\Api;
 
-use nickurt\OpenProvider\Client;
+use rouda\OpenProvider\Client;
 use \Spatie\ArrayToXml\ArrayToXml;
 
 abstract class AbstractApi implements ApiInterface

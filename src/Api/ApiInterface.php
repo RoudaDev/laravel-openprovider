@@ -1,8 +1,7 @@
 <?php
 
-namespace nickurt\OpenProvider\Api;
+namespace rouda\OpenProvider\Api;
 
 interface ApiInterface
 {
-
 }

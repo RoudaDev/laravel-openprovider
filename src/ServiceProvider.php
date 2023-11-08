@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider;
+namespace rouda\OpenProvider;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -23,7 +23,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function provides()
     {
-        return ['nickurt\OpenProvider\OpenProvider', 'OpenProvider'];
+        return ['rouda\OpenProvider\OpenProvider', 'OpenProvider'];
     }
 
     /**
@@ -33,13 +33,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('nickurt\OpenProvider\OpenProvider', function ($app) {
+        $this->app->singleton('rouda\OpenProvider\OpenProvider', function ($app) {
             $openProvider = new OpenProvider($app);
             $openProvider->connection($openProvider->getDefaultConnection());
 
             return $openProvider;
         });
 
-        $this->app->alias('nickurt\OpenProvider\OpenProvider', 'OpenProvider');
+        $this->app->alias('rouda\OpenProvider\OpenProvider', 'OpenProvider');
     }
 }

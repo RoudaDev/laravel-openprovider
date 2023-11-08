@@ -1,8 +1,8 @@
 <?php
 
-use nickurt\OpenProvider\OpenProvider;
+use rouda\OpenProvider\OpenProvider;
 
-if (! function_exists('openprovider')) {
+if (!function_exists('openprovider')) {
     function openprovider()
     {
         return app(OpenProvider::class);

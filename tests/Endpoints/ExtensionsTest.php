@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider\Tests\Endpoints;
+namespace rouda\OpenProvider\Tests\Endpoints;
 
 class ExtensionsTest extends BaseEndpointTest
 {

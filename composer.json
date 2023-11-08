@@ -1,7 +1,10 @@
 {
     "name": "rouda/laravel-openprovider",
     "description": "OpenProvider for Laravel 6.x/7.x/8.x",
-    "keywords": ["openprovider", "laravel"],
+    "keywords": [
+        "openprovider",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0|^7.4",
@@ -15,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "nickurt\\OpenProvider\\": "src/"
+            "rouda\\OpenProvider\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -23,7 +26,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "nickurt\\OpenProvider\\tests\\": "tests"
+            "rouda\\OpenProvider\\tests\\": "tests"
         }
     },
     "scripts": {
@@ -35,10 +38,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "nickurt\\OpenProvider\\ServiceProvider"
+                "rouda\\OpenProvider\\ServiceProvider"
             ],
             "aliases": {
-                "OpenProvider": "nickurt\\OpenProvider\\Facade"
+                "OpenProvider": "rouda\\OpenProvider\\Facade"
             }
         }
     }

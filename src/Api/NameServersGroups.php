@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider\Api;
+namespace rouda\OpenProvider\Api;
 
 class NameServersGroups extends AbstractApi
 {

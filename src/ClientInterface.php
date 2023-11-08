@@ -1,8 +1,7 @@
 <?php
 
-namespace nickurt\OpenProvider;
+namespace rouda\OpenProvider;
 
 interface ClientInterface
 {
-
 }

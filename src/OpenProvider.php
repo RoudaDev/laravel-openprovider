@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider;
+namespace rouda\OpenProvider;
 
 class OpenProvider
 {
@@ -10,7 +10,7 @@ class OpenProvider
     /** @var array */
     protected $connections = [];
 
-    /** @var \nickurt\OpenProvider\Client */
+    /** @var \rouda\OpenProvider\Client */
     protected $client;
 
     /**
@@ -34,7 +34,7 @@ class OpenProvider
 
     /**
      * @param null|string $name
-     * @return \nickurt\OpenProvider\Client
+     * @return \rouda\OpenProvider\Client
      */
     public function connection($name = null)
     {
@@ -53,7 +53,7 @@ class OpenProvider
 
     /**
      * @param string $name
-     * @return \nickurt\OpenProvider\Client
+     * @return \rouda\OpenProvider\Client
      */
     protected function get($name)
     {
@@ -62,13 +62,13 @@ class OpenProvider
 
     /**
      * @param string $name
-     * @return \nickurt\OpenProvider\Client
+     * @return \rouda\OpenProvider\Client
      */
     protected function resolve($name)
     {
         $config = $this->getConfig($name);
 
-        $this->client =  new \nickurt\OpenProvider\Client();
+        $this->client =  new \rouda\OpenProvider\Client();
         $this->client->setCredentials(
             $config['username'],
             $config['password']

@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider\HttpClient;
+namespace rouda\OpenProvider\HttpClient;
 
 class HttpClient implements HttpClientInterface
 {

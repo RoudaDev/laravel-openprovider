@@ -1,29 +1,41 @@
 ## Laravel OpenProvider
-[![Build Status](https://github.com/nickurt/laravel-openprovider/workflows/tests/badge.svg)](https://github.com/nickurt/laravel-openprovider/actions)
-[![Total Downloads](https://poser.pugx.org/nickurt/laravel-openprovider/d/total.svg)](https://packagist.org/packages/nickurt/laravel-openprovider)
-[![Latest Stable Version](https://poser.pugx.org/nickurt/laravel-openprovider/v/stable.svg)](https://packagist.org/packages/nickurt/laravel-openprovider)
-[![MIT Licensed](https://poser.pugx.org/nickurt/laravel-openprovider/license.svg)](LICENSE.md)
+
+[![Build Status](https://github.com/rouda/laravel-openprovider/workflows/tests/badge.svg)](https://github.com/rouda/laravel-openprovider/actions)
+[![Total Downloads](https://poser.pugx.org/rouda/laravel-openprovider/d/total.svg)](https://packagist.org/packages/rouda/laravel-openprovider)
+[![Latest Stable Version](https://poser.pugx.org/rouda/laravel-openprovider/v/stable.svg)](https://packagist.org/packages/rouda/laravel-openprovider)
+[![MIT Licensed](https://poser.pugx.org/rouda/laravel-openprovider/license.svg)](LICENSE.md)
 
 ### Table of contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tests](#tests)
+
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Tests](#tests)
+
 ### Installation
+
 Install this package with composer:
+
 ```
-composer require nickurt/laravel-openprovider
+composer require rouda/laravel-openprovider
 ```
+
 Copy the config files for the OpenProvider-plugin
+
 ```
-php artisan vendor:publish --provider="nickurt\OpenProvider\ServiceProvider" --tag="config"
+php artisan vendor:publish --provider="rouda\OpenProvider\ServiceProvider" --tag="config"
 ```
+
 Add the OpenProvider credentials to your .env file
+
 ```
 OPENPROVIDER_DEFAULT_USERNAME=
 OPENPROVIDER_DEFAULT_PASSWORD=
 ```
+
 ### Usage
+
 #### Dependency injection [e.g. by using multiple connections]
+
 ```php
 // Route
 Route::get('/openprovider/{openProvider}/customers', ['as' => 'openprovider/customers', 'uses' => 'CustomersController@getIndex']);
@@ -44,7 +56,9 @@ public function getIndex(OpenProvider $openProvider)
     //
 }
 ```
+
 #### Customers
+
 ```php
 OpenProvider::customers()->createCustomer(array $params)
 OpenProvider::customers()->deleteCustomer(array $params)
@@ -52,7 +66,9 @@ OpenProvider::customers()->modifyCustomer(array $params)
 OpenProvider::customers()->retrieveCustomer(array $params)
 OpenProvider::customers()->searchCustomer(array $params)
 ```
+
 #### Domains
+
 ```php
 OpenProvider::domains()->approveTransferDomain(array $params)
 OpenProvider::domains()->checkDomain(array $params)
@@ -73,31 +89,41 @@ OpenProvider::domains()->tradeDomain(array $params)
 OpenProvider::domains()->transferDomain(array $params)
 OpenProvider::domains()->tryAgainDomain(array $params)
 ```
+
 #### Emails
+
 ```php
 OpenProvider::emails()->restartCustomerEmailVerification(array $params)
 OpenProvider::emails()->searchEmailVerificationDomain(array $params)
 OpenProvider::emails()->startCustomerEmailVerification(array $params)
 ```
+
 #### Emails Templates
+
 ```php
 OpenProvider::emailstemplates()->createEmailTemplate(array $params)
 OpenProvider::emailstemplates()->deleteEmailTemplate(array $params)
 OpenProvider::emailstemplates()->modifyEmailTemplate(array $params)
 OpenProvider::emailstemplates()->searchEmailTemplate(array $params)
 ```
+
 #### Extensions
+
 ```php
 OpenProvider::extensions()->searchExtension(array $params)
 OpenProvider::extensions()->retrieveExtension(array $params)
 ```
+
 #### Financials
+
 ```php
 OpenProvider::financials()->searchInvoiceReseller(array $params)
 OpenProvider::financials()->searchPaymentReseller(array $params)
 OpenProvider::financials()->searchTransactionReseller(array $params)
 ```
+
 #### Licenses
+
 ```php
 OpenProvider::licenses()->createPleskLicense(array $params)
 OpenProvider::licenses()->createVirtuozzoLicense(array $params)
@@ -115,7 +141,9 @@ OpenProvider::licenses()->searchPleskAndVirtuozzoLicense(array $params)
 OpenProvider::licenses()->searchPleskLicense(array $params)
 OpenProvider::licenses()->searchVirtuozzoLicense(array $params)
 ```
+
 #### NameServers
+
 ```php
 OpenProvider::nameservers()->createNs(array $params)
 OpenProvider::nameservers()->createTemplateDns(array $params)
@@ -133,7 +161,9 @@ OpenProvider::nameservers()->searchTemplateDns(array $params)
 OpenProvider::nameservers()->searchZoneDns(array $params)
 OpenProvider::nameservers()->searchZoneRecordDns(array $params)
 ```
+
 #### NameServers Groups
+
 ```php
 OpenProvider::nameserversgroups()->createNsGroup(array $params)
 OpenProvider::nameserversgroups()->deleteNsGroup(array $params)
@@ -141,7 +171,9 @@ OpenProvider::nameserversgroups()->modifyNsGroup(array $params)
 OpenProvider::nameserversgroups()->retrieveNsGroup(array $params)
 OpenProvider::nameserversgroups()->searchNsGroup(array $params)
 ```
+
 #### Resellers
+
 ```php
 OpenProvider::resellers()->createContactReseller(array $params)
 OpenProvider::resellers()->deleteContactReseller(array $params)
@@ -153,7 +185,9 @@ OpenProvider::resellers()->retrieveSettingsReseller()
 OpenProvider::resellers()->retrieveStatisticsReseller()
 OpenProvider::resellers()->searchContactReseller(array $params)
 ```
-#### Spam Experts 
+
+#### Spam Experts
+
 ```php
 OpenProvider::spamexperts()->createDomainSe(array $params)
 OpenProvider::spamexperts()->deleteDomainSe(array $params)
@@ -161,7 +195,9 @@ OpenProvider::spamexperts()->generateSeLoginUrl(array $params)
 OpenProvider::spamexperts()->modifyDomainSe(array $params)
 OpenProvider::spamexperts()->retrieveDomainSe(array $params)
 ```
+
 #### SSL
+
 ```php
 OpenProvider::ssl()->cancelSslCert(array $params)
 OpenProvider::ssl()->changeApproverEmailAddressSslCert(array $params)
@@ -180,14 +216,19 @@ OpenProvider::ssl()->retrieveReissueApproverEmailListSslCert(array $params)
 OpenProvider::ssl()->searchOrderSslCert(array $params)
 OpenProvider::ssl()->searchProductSslCert(array $params)
 ```
-#### Tags 
+
+#### Tags
+
 ```php
 OpenProvider::tags()->createTag(array $params)
 OpenProvider::tags()->deleteTag(array $params)
 OpenProvider::tags()->searchTagRequest(array $params)
 ```
+
 ### Tests
+
 ```sh
 composer test
 ```
-- - - 
+
+---

@@ -1,21 +1,21 @@
 <?php
 
-namespace nickurt\OpenProvider;
+namespace rouda\OpenProvider;
 
 /**
- * @method static \nickurt\OpenProvider\Api\Customers customers()
- * @method static \nickurt\OpenProvider\Api\Domains domains()
- * @method static \nickurt\OpenProvider\Api\Emails emails()
- * @method static \nickurt\OpenProvider\Api\EmailsTemplates emailstemplates()
- * @method static \nickurt\OpenProvider\Api\Extensons extensions()
- * @method static \nickurt\OpenProvider\Api\Financials financials()
- * @method static \nickurt\OpenProvider\Api\Licenses licenses()
- * @method static \nickurt\OpenProvider\Api\NameServers nameservers()
- * @method static \nickurt\OpenProvider\Api\NameServersGroups nameserversgroups()
- * @method static \nickurt\OpenProvider\Api\Resellers resellers()
- * @method static \nickurt\OpenProvider\Api\SpamExperts spamexperts()
- * @method static \nickurt\OpenProvider\Api\Ssl ssl()
- * @method static \nickurt\OpenProvider\Api\Tags tags()
+ * @method static \rouda\OpenProvider\Api\Customers customers()
+ * @method static \rouda\OpenProvider\Api\Domains domains()
+ * @method static \rouda\OpenProvider\Api\Emails emails()
+ * @method static \rouda\OpenProvider\Api\EmailsTemplates emailstemplates()
+ * @method static \rouda\OpenProvider\Api\Extensons extensions()
+ * @method static \rouda\OpenProvider\Api\Financials financials()
+ * @method static \rouda\OpenProvider\Api\Licenses licenses()
+ * @method static \rouda\OpenProvider\Api\NameServers nameservers()
+ * @method static \rouda\OpenProvider\Api\NameServersGroups nameserversgroups()
+ * @method static \rouda\OpenProvider\Api\Resellers resellers()
+ * @method static \rouda\OpenProvider\Api\SpamExperts spamexperts()
+ * @method static \rouda\OpenProvider\Api\Ssl ssl()
+ * @method static \rouda\OpenProvider\Api\Tags tags()
  */
 class Facade extends \Illuminate\Support\Facades\Facade
 {

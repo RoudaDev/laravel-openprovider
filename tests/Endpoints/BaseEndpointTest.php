@@ -1,6 +1,6 @@
 <?php
 
-namespace nickurt\OpenProvider\Tests\Endpoints;
+namespace rouda\OpenProvider\Tests\Endpoints;
 
 use PHPUnit\Framework\TestCase;
 
@@ -9,7 +9,7 @@ abstract class BaseEndpointTest extends TestCase
     /** @var \GuzzleHttp\Client */
     protected $httpClient;
 
-    /** @var \nickurt\OpenProvider\Client */
+    /** @var \rouda\OpenProvider\Client */
     protected $openProvider;
 
     /**
@@ -19,7 +19,7 @@ abstract class BaseEndpointTest extends TestCase
     {
         $this->httpClient = $this->createMock(\GuzzleHttp\Client::class);
 
-        $this->openProvider = new \nickurt\OpenProvider\Client();
+        $this->openProvider = new \rouda\OpenProvider\Client();
         $this->openProvider->setCredentials('username', 'password');
         $this->openProvider->getHttpClient()->setClient($this->httpClient);
 

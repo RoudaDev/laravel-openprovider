@@ -1,13 +1,13 @@
 <?php
 
-namespace nickurt\OpenProvider\Tests;
+namespace rouda\OpenProvider\Tests;
 
 use OpenProvider;
 use Orchestra\Testbench\TestCase;
 
 class OpenProviderTest extends TestCase
 {
-    /** @var \nickurt\OpenProvider\OpenProvider */
+    /** @var \rouda\OpenProvider\OpenProvider */
     protected $openProvider;
 
     /**
@@ -46,7 +46,7 @@ class OpenProviderTest extends TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'OpenProvider' => \nickurt\OpenProvider\Facade::class
+            'OpenProvider' => \rouda\OpenProvider\Facade::class
         ];
     }
 
@@ -57,7 +57,7 @@ class OpenProviderTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \nickurt\OpenProvider\ServiceProvider::class
+            \rouda\OpenProvider\ServiceProvider::class
         ];
     }
 
@@ -94,6 +94,6 @@ class OpenProviderTest extends TestCase
     /** @test */
     public function it_can_work_with_helper_function()
     {
-        $this->assertInstanceOf(\nickurt\OpenProvider\OpenProvider::class, openprovider());
+        $this->assertInstanceOf(\rouda\OpenProvider\OpenProvider::class, openprovider());
     }
 }
