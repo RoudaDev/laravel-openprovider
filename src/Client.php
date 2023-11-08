@@ -30,7 +30,7 @@ class Client
      */
     protected $endpoints = [
         'live' => 'https://api.openprovider.eu',
-        'cte' => 'http://api.sandbox.openprovider.nl:8480/v1beta/'
+        'cte' => 'http://api.sandbox.openprovider.nl'
     ];
 
     /**
