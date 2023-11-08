@@ -1,5 +1,5 @@
 {
-    "name": "nickurt/laravel-openprovider",
+    "name": "rouda/laravel-openprovider",
     "description": "OpenProvider for Laravel 6.x/7.x/8.x",
     "keywords": ["openprovider", "laravel"],
     "license": "MIT",
